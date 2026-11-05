@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LittleHarbor，小小港湾。一个给想法留点空间的简单主页。">
+  <meta name="color-scheme" content="light">
+  <title>LittleHarbor · 小小港湾</title>
+  <style>
+    :root { --ink:#243c3a; --muted:#667571; --paper:#f7f5ef; --accent:#d46b4e; --line:#dcded5; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif; }
+    a { color:inherit; text-decoration:none; }
+    a:focus-visible { outline:3px solid var(--accent); outline-offset:6px; }
+    .wrap { width:min(1100px,calc(100% - 48px)); margin:auto; }
+    header { display:flex; align-items:center; justify-content:space-between; padding:30px 0; border-bottom:1px solid var(--line); gap:20px; }
+    .brand { font-size:18px; font-weight:750; letter-spacing:-.5px; }
+    .brand span { color:var(--accent); margin-right:9px; }
+    nav { display:flex; gap:24px; font-size:14px; }
+    nav a:hover { color:var(--accent); }
+    .hero { min-height:590px; padding:84px 0 72px; display:grid; grid-template-columns:1.15fr 1fr; align-items:center; gap:50px; }
+    .eyebrow { color:var(--accent); font-size:12px; letter-spacing:3px; font-weight:700; margin:0 0 24px; }
+    h1 { font-size:clamp(44px,5.4vw,68px); line-height:1.2; letter-spacing:-2px; font-weight:650; margin:0 0 24px; }
+    .intro { max-width:400px; font-size:16px; line-height:1.9; color:var(--muted); }
+    .button { display:inline-flex; align-items:center; gap:30px; padding:15px 22px; border-radius:8px; background:var(--ink); color:white; margin-top:22px; font-size:14px; }
+    .button:hover { background:#35544f; }
+    .art { margin:0; background:#e8ede5; border-radius:48% 48% 10px 10px; overflow:hidden; aspect-ratio:1/1.05; }
+    .art svg { display:block; width:100%; height:100%; }
+    .section-heading { display:flex; justify-content:space-between; align-items:baseline; gap:16px; margin-bottom:24px; }
+    .section-heading h2 { font-size:24px; font-weight:600; margin:0; }
+    .section-heading span { color:var(--muted); font-size:12px; letter-spacing:2px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; padding-bottom:64px; }
+    article { border-top:1px solid var(--line); padding:25px 0; }
+    .number { font-size:12px; color:var(--accent); }
+    h3 { font-size:19px; font-weight:600; margin:18px 0 12px; }
+    article p { color:var(--muted); font-size:14px; line-height:1.9; margin:0; }
+    footer { border-top:1px solid var(--line); padding:25px 0 32px; display:flex; justify-content:space-between; gap:16px; color:var(--muted); font-size:12px; }
+    @media(max-width:700px) { .wrap { width:calc(100% - 36px); } header { padding:24px 0; } nav { gap:16px; } .hero { grid-template-columns:1fr; gap:40px; padding:54px 0; } h1 { letter-spacing:-1px; } .art { max-width:400px; width:100%; justify-self:center; } .cards { grid-template-columns:1fr; gap:0; padding-bottom:24px; } footer { flex-direction:column; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#home"><span aria-hidden="true">◒</span>LittleHarbor</a>
+      <nav aria-label="主导航"><a href="#home">首页</a><a href="#about">关于</a></nav>
+    </header>
+    <main id="home">
+      <section class="hero" aria-labelledby="welcome">
+        <div>
+          <p class="eyebrow">A SMALL PLACE TO BEGIN</p>
+          <h1 id="welcome">留一点空间，<br>给新的想法。</h1>
+          <p class="intro">欢迎来到小小港湾。<br>在这里放慢一点，把灵感收好，<br>让每一个小小的开始，都有地方停靠。</p>
+          <a class="button" href="#about">逛一逛这里 <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="art">
+          <svg viewBox="0 0 440 462" role="img" aria-labelledby="art-title" xmlns="http://www.w3.org/2000/svg">
+            <title id="art-title">暖阳下，一艘小帆船停在平静的港湾</title>
+            <rect width="440" height="462" fill="#e8ede5"/>
+            <circle cx="310" cy="112" r="42" fill="#df8b62"/>
+            <path d="M0 285 Q100 255 220 280 T440 270 V462 H0Z" fill="#a5bdb0"/>
+            <path d="M0 333 Q130 300 240 325 T440 320 V462 H0Z" fill="#789e91"/>
+            <path d="M0 385 Q140 355 260 378 T440 367 V462 H0Z" fill="#547e73"/>
+            <path d="M210 148 V316" stroke="#38534b" stroke-width="4" stroke-linecap="round"/>
+            <path d="M202 163 L202 283 L126 283Z" fill="#fffaf0"/>
+            <path d="M220 186 L279 283 L220 283Z" fill="#e8c79f"/>
+            <path d="M123 299 H293 L267 326 H151Z" fill="#344f48"/>
+            <path d="M161 347 H244 M278 367 H324 M74 396 H142" stroke="#d1dfd4" stroke-width="3" stroke-linecap="round" opacity=".65"/>
+            <path d="M77 122 Q87 112 97 122 M97 122 Q107 112 117 122" fill="none" stroke="#789184" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </figure>
+      </section>
+      <section id="about" aria-labelledby="about-title">
+        <div class="section-heading"><h2 id="about-title">从简单开始</h2><span>LESS, BUT BETTER</span></div>
+        <div class="cards">
+          <article><span class="number">01 / 想法</span><h3>记下灵光一闪</h3><p>不需要完整的计划。一个念头、一段文字，就是一个不错的起点。</p></article>
+          <article><span class="number">02 / 探索</span><h3>保持一点好奇</h3><p>给日常留一点空白，发现新的视角，也试试不同的可能。</p></article>
+          <article><span class="number">03 / 日常</span><h3>按自己的节奏</h3><p>不用着急把一切填满。慢慢积累，让简单的小事变得有意义。</p></article>
+        </div>
+      </section>
+    </main>
+    <footer><span>LittleHarbor · 小小港湾</span><span>一个简单的开始。</span></footer>
+  </div>
+</body>
+</html>
